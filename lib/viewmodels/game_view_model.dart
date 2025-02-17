@@ -39,15 +39,15 @@ class GameViewModel {
   Widget getIcon(CaseModel cell) {
     if (cell.hidden) {
       return cell.hasFlag
-          ? Image.asset('assets/imagesDemineur/tile_2_1.png', height: 32)
-          : Image.asset('assets/imagesDemineur/tile_2_0.png', height: 32);
+          ? Image.asset('assets/images/tile_2_1.png', height: 32)
+          : Image.asset('assets/images/tile_2_0.png', height: 32);
     } else {
       if (cell.hasBomb) {
-        return Image.asset('assets/imagesDemineur/tile_2_2.png', height: 32);
+        return Image.asset('assets/images/tile_2_2.png', height: 32);
       } else if (cell.number != null && cell.number! > 0) {
-        return Image.asset('assets/imagesDemineur/tile_0_${cell.number}.png', height: 32);
+        return Image.asset('assets/images/tile_0_${cell.number}.png', height: 32);
       } else {
-        return Image.asset('assets/imagesDemineur/tile_0_0.png', height: 32);
+        return Image.asset('assets/images/tile_0_0.png', height: 32);
       }
     }
   }
